@@ -1,3 +1,9 @@
 <p>
-  login works!
+  {{ 'LOGIN.TITLE' | translate}}
+</p>
+<h2>LOGIN</h2>
+<p>{{message}}</p>
+<p>
+  <button (click)="login()"  *ngIf="!loginService.isLoggedIn">Login</button>
+  <button (click)="logout()" *ngIf="loginService.isLoggedIn">Logout</button>
 </p>
